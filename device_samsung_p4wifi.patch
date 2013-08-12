@@ -1,0 +1,13 @@
+diff --git a/BoardConfig.mk b/BoardConfig.mk
+index cc49a2b..a68cf6d 100644
+--- a/BoardConfig.mk
++++ b/BoardConfig.mk
+@@ -26,4 +26,4 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 606076928
+ BOARD_USERDATAIMAGE_PARTITION_SIZE := 14472970240
+ 
+ TARGET_PREBUILT_KERNEL := device/samsung/p4wifi/kernel
+-
++TARGET_KERNEL_CONFIG := samsung_p4wifi_defconfig
+-- 
+1.7.10.4
+

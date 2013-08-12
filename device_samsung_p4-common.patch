@@ -1,0 +1,26 @@
+# fix permissions for brightness
+diff --git a/init.p3.rc b/init.p3.rc
+index b5180a2..3f1f05c 100644
+--- a/init.p3.rc
++++ b/init.p3.rc
+@@ -186,6 +186,7 @@ on boot
+
+ # backlight
+     chown system system /sys/class/backlight/pwm-backlight/brightness
++    chmod 0666 /sys/class/backlight/pwm-backlight/brightness
+
+ # Sensor
+     chmod 666 /dev/nvhost-ctrl
+
+# enable suid on /data partition
+diff --git a/fstab.p3 b/fstab.p3
+index 23d97e6..2a19590 100644
+--- a/fstab.p3
++++ b/fstab.p3
+@@ -6,5 +6,5 @@
+
+ /dev/block/platform/sdhci-tegra.3/by-num/p4    /system    ext4    ro                      wait
+ /dev/block/platform/sdhci-tegra.3/by-num/p5    /cache     ext4    noatime,nosuid,nodev    wait,check
+-/dev/block/platform/sdhci-tegra.3/by-num/p8    /data      ext4    noatime,nosuid,nodev,noauto_da_alloc    wait
++/dev/block/platform/sdhci-tegra.3/by-num/p8    /data      ext4    noatime,nodev,noauto_da_alloc    wait
+ /dev/block/platform/sdhci-tegra.3/by-num/p1    /efs       ext4    noatime,nosuid,nodev    wait,check
