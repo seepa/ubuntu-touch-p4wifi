@@ -1,7 +1,7 @@
-diff --git a/arch/arm/configs/samsung_p4wifi_defconfig b/arch/arm/configs/samsung_p4wifi_defconfig
-index c66d669..6c9b38a 100644
---- a/arch/arm/configs/samsung_p4wifi_defconfig
-+++ b/arch/arm/configs/samsung_p4wifi_defconfig
+diff --git arch/arm/configs/samsung_p4wifi_defconfig arch/arm/configs/samsung_p4wifi_defconfig
+index c66d669..ee569e5 100644
+--- arch/arm/configs/samsung_p4wifi_defconfig
++++ arch/arm/configs/samsung_p4wifi_defconfig
 @@ -43,13 +43,25 @@ CONFIG_KERNEL_GZIP=y
  # CONFIG_KERNEL_LZMA is not set
  # CONFIG_KERNEL_LZO is not set
@@ -47,16 +47,26 @@ index c66d669..6c9b38a 100644
  CONFIG_NET_ACTIVITY_STATS=y
  # CONFIG_NETWORK_SECMARK is not set
  # CONFIG_NETWORK_PHY_TIMESTAMPING is not set
-@@ -844,7 +856,7 @@ CONFIG_RFKILL_PM=y
+@@ -844,7 +856,8 @@ CONFIG_RFKILL_PM=y
  # Generic Driver Options
  #
  CONFIG_UEVENT_HELPER_PATH=""
 -# CONFIG_DEVTMPFS is not set
 +CONFIG_DEVTMPFS=y
++CONFIG_DEVTMPFS_MOUNT=y
  CONFIG_STANDALONE=y
  CONFIG_PREVENT_FIRMWARE_BUILD=y
  CONFIG_FW_LOADER=y
-@@ -1282,7 +1294,7 @@ CONFIG_SERIAL_CORE_CONSOLE=y
+@@ -1258,7 +1271,7 @@ CONFIG_DEVMEM=y
+ # CONFIG_SERIAL_NONSTANDARD is not set
+ # CONFIG_N_GSM is not set
+ CONFIG_CONSOLE_TRANSLATIONS=y
+-# CONFIG_VT_CONSOLE is not set
++CONFIG_VT_CONSOLE=y
+ CONFIG_HW_CONSOLE=y
+ 
+ #
+@@ -1282,7 +1295,7 @@ CONFIG_SERIAL_CORE_CONSOLE=y
  # CONFIG_SERIAL_ALTERA_JTAGUART is not set
  # CONFIG_SERIAL_ALTERA_UART is not set
  CONFIG_UNIX98_PTYS=y
@@ -65,7 +75,7 @@ index c66d669..6c9b38a 100644
  # CONFIG_LEGACY_PTYS is not set
  # CONFIG_IPMI_HANDLER is not set
  # CONFIG_HW_RANDOM is not set
-@@ -2270,7 +2282,7 @@ CONFIG_FS_POSIX_ACL=y
+@@ -2270,7 +2283,7 @@ CONFIG_FS_POSIX_ACL=y
  # CONFIG_NILFS2_FS is not set
  CONFIG_FILE_LOCKING=y
  CONFIG_FSNOTIFY=y
@@ -74,6 +84,3 @@ index c66d669..6c9b38a 100644
  CONFIG_INOTIFY_USER=y
  # CONFIG_QUOTA is not set
  # CONFIG_AUTOFS_FS is not set
--- 
-1.7.10.4
-
